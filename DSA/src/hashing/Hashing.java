@@ -11,18 +11,6 @@ public class Hashing {
 	}
 	public Hashing() {}
 public boolean subArrayWithGivenSum(int[] arr, int sum) {
-// naieve solution
-//		int tempsum=0;
-//	for(int i=0;i<arr.length-1;i++) {
-//		tempsum=0;
-//		for(int j=i;j<arr.length;j++) {
-//		tempsum=tempsum+arr[j];
-//		if(sum==tempsum)
-//			return true;
-//		}
-//	}
-//	return false;
-	//efficient solution
 	
 	HashSet<Integer> hs= new HashSet<>();
 	int currSum=0;
