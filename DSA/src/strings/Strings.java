@@ -16,13 +16,26 @@ public class Strings {
 	public char[] to_lower(char[] A) {
         char[] ans=new char[A.length];
         for(int i=0;i<A.length;i++){
-            if(A[i]>='A' && A[i]<='Z'){
-                ans[i]=(char)(Character.getNumericValue(A[i])+32);
+        	 if(A[i]>=65 && A[i]<=90){
+                 int c=(int)A[i];
+  	           ans[i]=(char)(c+32);
+              }
+            else
+            ans[i]=A[i];
+        }
+        return ans;
+    }
+	 public char[] to_upper(char[] A) {
+         char[] ans=new char[A.length];
+        for(int i=0;i<A.length;i++){
+            if(A[i]>=97 && A[i]<=122){
+               int c=(int)A[i];
+	           ans[i]=(char)(c-32);
             }
             else
             ans[i]=A[i];
         }
         return ans;
     }
-
+	 
 }
