@@ -4,10 +4,18 @@ public class Tests {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-String str="strings";
+String str="abba";
 Strings s=new Strings();
-//int i=s.solve(str);
-System.out.println(0);
+/*
+s.to_lower(null);
+s.to_upper(null);
+s.reverse(str);
+s.longestPalindrome(str);
+s.longestCommonPrefix(A)
+*/
+String A[]= {"abab", "abc", "abcd"};
+System.out.println(s.longestCommonPrefix(A));
+
 	}
 
 }
