@@ -19,5 +19,23 @@ public class BitManipulation {
          return a;
 
     }
-
+	public int helpFromSam(int A) {
+        int count=0;
+        while(A>0){
+            if((A&1)==1){
+                A=A-1;
+                count++;
+            }
+            A=A>>1;
+        }
+        return count;
+	}
+	 public int findingGoodDays(int A) {
+		 int count = 0;
+	     while(A > 0){
+	           A &= A-1;
+	           ++count;
+	     }
+	     return count;
+	    }
 }

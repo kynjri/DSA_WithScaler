@@ -24,7 +24,7 @@ public boolean subArrayWithGivenSum(int[] arr, int sum) {
 	}
 	return false;
 }
-public ArrayList<Integer> solve(ArrayList<Integer> A, ArrayList<Integer> B) {
+public ArrayList<Integer>  frequencyOfElementQuery(ArrayList<Integer> A, ArrayList<Integer> B) {
     HashMap<Integer,Integer> map=new HashMap<Integer,Integer>();
 
     for(int i=0;i<A.size();i++){
@@ -101,5 +101,33 @@ public int[] dNums(int[] A, int B) {
         c++;
     }
    return res;
+}
+public int countPairSum(int[] A, int B) {
+    final int mod = (int)(1e9 + 7);
+   int count=0;
+   HashMap<Integer,Integer> map=new HashMap<>();
+
+ for(int i = 0 ; i < A.length ; i++){
+       if(map.containsKey(B-A[i])){
+           count=(count+ map.get(B-A[i]))%mod;
+           System.out.println(count);
+       }
+       map.put(A[i],map.getOrDefault(A[i],0)+1);
+   }
+   return count;
+}
+public int countPairDifference(int[] A, int B) {
+    final int mod = (int)(1e9 + 7);
+    int count=0;
+    HashMap<Integer,Integer> map=new HashMap<>();
+    int p;
+  for(int i = 0 ; i < A.length ; i++){
+	   //p=Math.abs(B-A[i]);
+      if(map.containsKey(B-A[i])){
+          count=(count+ map.get(B-A[i]))%mod;
+      }
+      map.put(A[i],map.getOrDefault(A[i],0)+1);
+    }
+    return count;
 }
 }
